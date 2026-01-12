@@ -4,6 +4,7 @@ import Learning from './components/Learning'
 import Practice from './components/Practice'
 import Leaderboard from './components/Leaderboard'
 import Shop from './components/Shop'
+import DailyStreak from './components/DailyStreak'
 
 function App() {
   const [currentTab, setCurrentTab] = useState('learning')
@@ -20,6 +21,8 @@ function App() {
         return <Leaderboard />
       case 'shop':
         return <Shop />
+      case 'streak':
+        return <DailyStreak />
       default:
         return <Learning />
     }
@@ -64,7 +67,11 @@ function App() {
           </nav>
         </div>
         <div className="header-right">
-          <div className="streak">
+          <div 
+            className={`streak ${currentTab === 'streak' ? 'active' : ''}`}
+            onClick={() => setCurrentTab('streak')}
+            style={{ cursor: 'pointer' }}
+          >
             <span className="streak-icon">🔥</span>
             <span className="streak-count">{streak}</span>
           </div>
