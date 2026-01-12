@@ -130,6 +130,51 @@
   gap: 1.5rem;
 }
 
+/* Auth Header Buttons */
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.auth-header-btn {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.login-btn {
+  background: transparent;
+  color: #1cb0f6;
+  border: 2px solid #1cb0f6;
+}
+
+.login-btn:hover {
+  background: #1cb0f6;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(28, 176, 246, 0.3);
+}
+
+.signup-btn {
+  background: #58cc02;
+  color: white;
+  border: 2px solid #58cc02;
+}
+
+.signup-btn:hover {
+  background: #4caf00;
+  border-color: #4caf00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(88, 204, 2, 0.3);
+}
+
 .streak, .xp {
   display: flex;
   align-items: center;
@@ -155,6 +200,19 @@
   font-size: 1.1rem;
 }
 
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.profile:hover {
+  background: #f7f7f7;
+}
+
 .profile-avatar {
   width: 40px;
   height: 40px;
@@ -170,6 +228,13 @@
 
 .profile-avatar:hover {
   transform: scale(1.1);
+}
+
+.profile-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #3c3c3c;
+  padding-right: 0.5rem;
 }
 
 /* Main Content */
