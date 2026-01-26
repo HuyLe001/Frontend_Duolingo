@@ -1,0 +1,194 @@
+.shop-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.shop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shop-header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.user-gems {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+  border-radius: 24px;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(21, 101, 192, 0.3);
+}
+
+.gems-icon {
+  font-size: 28px;
+  animation: gem-sparkle 2s infinite;
+}
+
+@keyframes gem-sparkle {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.shop-item {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid transparent;
+}
+
+.shop-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-color: #58cc02;
+}
+
+.shop-item.disabled {
+  opacity: 0.6;
+}
+
+.shop-item.disabled:hover {
+  transform: none;
+  border-color: transparent;
+}
+
+.item-icon {
+  font-size: 64px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.shop-item h3 {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.shop-item p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0 0 20px 0;
+  flex-grow: 1;
+}
+
+.item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.item-price {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: #e3f2fd;
+  border-radius: 20px;
+}
+
+.price-icon {
+  font-size: 20px;
+}
+
+.price-amount {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1565c0;
+}
+
+.buy-btn {
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #58cc02 0%, #46a302 100%);
+  color: white;
+  border: none;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(88, 204, 2, 0.3);
+}
+
+.buy-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #46a302 0%, #3d8a02 100%);
+  transform: scale(1.05);
+}
+
+.buy-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.shop-info {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shop-info h3 {
+  margin: 0 0 20px 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.shop-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.shop-info li {
+  padding: 12px;
+  margin-bottom: 8px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #555;
+  border-left: 4px solid #58cc02;
+}
+
+@media (max-width: 768px) {
+  .shop-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .shop-grid {
+    grid-template-columns: 1fr;
+  }
+}

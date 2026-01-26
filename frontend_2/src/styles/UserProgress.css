@@ -1,0 +1,152 @@
+.progress-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.progress-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.user-info h2 {
+  color: #2c3e50;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.recently-learned {
+  margin-top: 40px;
+}
+
+.recently-learned h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.learned-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.learned-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.learned-card .character {
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.learned-card .meaning {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.learned-card .info {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.learned-card .type {
+  display: inline-block;
+  padding: 3px 8px;
+  background: #E3F2FD;
+  color: #1976D2;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.learned-card .level {
+  display: inline-block;
+  padding: 3px 8px;
+  background: #ff9800;
+  color: white;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.learned-card .date {
+  font-size: 12px;
+  color: #999;
+  margin-top: 8px;
+}
+
+.no-data {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+}
+
+.refresh-btn {
+  display: block;
+  margin: 30px auto;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.refresh-btn:hover {
+  transform: scale(1.05);
+}
